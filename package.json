@@ -1,0 +1,9 @@
+{
+  "name": "learn-web_sockets-rtc-starter",
+  "version": "1.0.0",
+  "description": "Zoom Clone using NodeJS, WebRTC and Websockets",
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
