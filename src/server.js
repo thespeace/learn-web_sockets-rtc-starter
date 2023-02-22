@@ -4,10 +4,10 @@ import express from "express";
 
 const app = express();
 
-app.set("view engine", "pug");
-app.set("views", __dirname + "/views");
-app.use("/public", express.static(__dirname + "/public"));
-app.get("/", (req, res) => res.render("home"));
+app.set("view engine", "pug"); //view template, pug로 설정
+app.set("views", __dirname + "/views"); //view 디렉토리 설정
+app.use("/public", express.static(__dirname + "/public")); //public 폴더를 유저에게 공개 설정.
+app.get("/", (req, res) => res.render("home")); //url 이동시 사용될 템플링을 렌더링.
 app.get("/*", (req, res) => res.redirect("/"));
 
 const handleListen = () => console.log(`Listening on http://localhost:3000`);
