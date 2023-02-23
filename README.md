@@ -4,6 +4,7 @@ Zoom Clone using NodeJS, WebRTC and Websockets
 
 ---
 ## 개발환경 구축
+
 1. Nodemon 설정
    1. nodemon.json 생성 후 
 
@@ -15,6 +16,7 @@ Zoom Clone using NodeJS, WebRTC and Websockets
 
 ---
 ## 해당 환경 세팅에 대한 전체 흐름
+#### express를 사용한 일반적인 NodeJS 설정 > package.json, script 생성 > babel-node 실행, babel.config.json > preset 실행 > 
 1. Nodemon
    1. Nodemon은 프로젝트 파일의 변경 사항을 살펴보고 서버를 재시작해주는 도구입니다.
    2. 해당 프로젝트는 서버를 재시작하는 대신에 babel-node를 실행합니다.

@@ -7,8 +7,8 @@ const app = express();
 app.set("view engine", "pug"); //view template, pug로 설정
 app.set("views", __dirname + "/views"); //view 디렉토리 설정
 app.use("/public", express.static(__dirname + "/public")); //public 폴더를 유저에게 공개 설정.
-app.get("/", (req, res) => res.render("home")); //url 이동시 사용될 템플링을 렌더링.
-app.get("/*", (req, res) => res.redirect("/"));
+app.get("/", (req, res) => res.render("home")); //홈페이지로 이동 시 사용될 템플링을 렌더링.
+app.get("/*", (req, res) => res.redirect("/")); //catchall url 생성, 다른 url은 사용안하고 home만 사용하기 때문.
 
 const handleListen = () => console.log(`Listening on http://localhost:3000`);
 // app.listen(3000, handleListen);
