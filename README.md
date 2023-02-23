@@ -3,17 +3,20 @@
 Zoom Clone using NodeJS, WebRTC and Websockets
 
 ---
-## 개발환경 구축
-
-1. Nodemon 설정
-   1. nodemon.json 생성 후 
-
-### -nodemon.json
-1. exec : run server.js
-
-### -babel.config.json
-1. preset :  `i @babel/preset-env -D`
-
+## Server Setup
+#### 자세한 설정은 파일 소스코드 확인.
+1. 프로젝트 생성 후, 해당 폴더 터미널에서 ``npm init -y``를 입력.
+2. 해당 프로젝트를 열고 package.json 파일을 설정(모듈 설치 시 자동 업데이트).
+   1. ``npm i nodemon -D`` : 서버 재시작 모듈 설치 후, *nodemon.json* 파일 생성.
+   2. ``npm i @babel/core @babel/cli @babel/node @babel/preset-env -D`` : JavaScript 트랜스컴파일러 babel 설치  후, *babel.config.json* 파일 생성/ 만일 오류가 발생하면 각각 따로따로 설치.   
+3. ```npm i express``` 실행.
+4. 서버 설정이 들어갈 src > *server.js* 생성 후 설정.
+5. ```npm run dev```로 적상 작동 확인.
+---
+## Frontend Setup
+#### 자세한 설정은 파일 소스코드 확인.
+1. src > public > js > *app.js* 파일 생성 : js
+2. src > views > *home.pug* 파일 생성 : view template. ex) html
 ---
 ## 해당 환경 세팅에 대한 전체 흐름
 #### express를 사용한 일반적인 NodeJS 설정 > package.json, script 생성 > babel-node 실행, babel.config.json > preset 실행 > 
