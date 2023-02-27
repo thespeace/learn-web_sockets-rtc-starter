@@ -1,5 +1,5 @@
 import http from "http";
-import WebSocket from "ws";
+import WebSocket from "ws"; /*npm i ws*/
 import express from "express";
 
 const app = express();
@@ -13,10 +13,10 @@ app.get("/*", (req, res) => res.redirect("/")); //catchall url 생성, 다른 ur
 const handleListen = () => console.log(`Listening on http://localhost:3000`);
 // app.listen(3000, handleListen);
 
-const server = http.createServer(app);
+const server = http.createServer(app); /*express.js를 통해 http서버 만들고,서버 접근 가능 설정*/
 
-const wss = new WebSocket.Server({ server });
-
+const wss = new WebSocket.Server({ server }); /*server을 전달하여, http서버 위에 ws서버 만들기. 둘 다 같은 port를 사용하니, http, webSocket(ws) 둘 다 작동.*/
+                                              /*고로, 우리의 서버는 http protocol과 ws connection(연결)을 지원 가능하게 되었다. 둘 중 하나의 서버만 가동해도 상관없다.*/
 const sockets = [];
 
 wss.on("connection", (socket) => {
