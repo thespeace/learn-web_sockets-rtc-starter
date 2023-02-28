@@ -1,8 +1,5 @@
-# Noom
+# WebSockets
 
-Zoom Clone using NodeJS, WebRTC and Websockets
-
----
 ## Server Setup
 #### 자세한 설정은 파일 소스코드 확인.
 1. 프로젝트 생성 후, 해당 폴더 터미널에서 ``npm init -y``를 입력.
@@ -32,3 +29,4 @@ Zoom Clone using NodeJS, WebRTC and Websockets
 5. 파일 경로
    1. app.js : FrontEnd == browser
    2. server.js : BackEnd == server
+
